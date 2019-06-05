@@ -1,39 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-
-namespace CompanyProductsAPI.Controllers
+﻿namespace CompanyProductsAPI.Controllers
 {
-    public class ValuesController : ApiController
+    using Models;
+    using System.Collections.Generic;
+    using System.Web.Http;
+
+    public class ProductsController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<Product> Get(Category.CategoryType category)
         {
-            return new string[] { "value1", "value2" };
-        }
+            var products = new List<Product>
+            {
+                new Product
+                {
+                    Id = 1,
+                    Name = "This is my name",
+                    Description = "This is my description",
+                    Brand = "This is my brand",
+                    PhotoUrl = "https://thisismyurl.com",
+                    Price = 1000000,
+                    Stock = 12312312,
+                    Categories = new List<string> { "Office", "Services" }
+                }
+            };
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
+            return products;
         }
     }
 }
