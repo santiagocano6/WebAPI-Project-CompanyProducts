@@ -1,7 +1,9 @@
 ﻿namespace Models
 {
-    interface IRecord
+    using System;
+
+    public interface IRecord
     {
-        int Id { get; set; }
+        Guid Id { get; set; }
     }
 }

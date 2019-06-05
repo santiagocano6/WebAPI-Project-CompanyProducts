@@ -1,5 +1,6 @@
 ﻿namespace Models
 {
+    using System;
     using System.Collections.Generic;
     using System.Runtime.Serialization;
 
@@ -7,7 +8,7 @@
     public class Product : IRecord
     {
         [DataMember(Name = "id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [DataMember(Name = "name")]
         public string Name { get; set; }
