@@ -1,4 +1,4 @@
-﻿namespace Models
+﻿namespace DataModels
 {
     using System;
     using System.Collections.Generic;

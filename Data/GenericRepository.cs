@@ -1,12 +1,10 @@
 ﻿namespace Data
 {
     using System;
-    using System.Collections.Generic;
-    using System.IO;
     using System.Linq;
     using System.Linq.Expressions;
     using Data.ORM;
-    using Models;
+    using DataModels;
 
     public class GenericRepository<T> : IRepository<T> where T : IRecord
     {

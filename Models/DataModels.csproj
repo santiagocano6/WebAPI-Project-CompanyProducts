@@ -7,8 +7,8 @@
     <ProjectGuid>{7B188510-9917-4872-8A41-DA0FC386317A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Models</RootNamespace>
-    <AssemblyName>Models</AssemblyName>
+    <RootNamespace>DataModels</RootNamespace>
+    <AssemblyName>DataModels</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

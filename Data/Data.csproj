@@ -50,9 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
+    <ProjectReference Include="..\Models\DataModels.csproj">
       <Project>{7b188510-9917-4872-8a41-da0fc386317a}</Project>
-      <Name>Models</Name>
+      <Name>DataModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
