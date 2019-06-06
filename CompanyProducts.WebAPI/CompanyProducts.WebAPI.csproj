@@ -262,13 +262,13 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CompanyProducts.Bll\CompanyProducts.Bll.csproj">
+      <Project>{6ca6abd6-b03a-4c8f-8edc-9833ae8540fb}</Project>
+      <Name>CompanyProducts.Bll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CompanyProducts.DataModels\CompanyProducts.DataModels.csproj">
       <Project>{7b188510-9917-4872-8a41-da0fc386317a}</Project>
       <Name>CompanyProducts.DataModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CompanyProducts.Data\CompanyProducts.Data.csproj">
-      <Project>{4ce27718-0ef0-48c6-b3dc-d9755a0d8675}</Project>
-      <Name>CompanyProducts.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -49,11 +49,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="IntegrationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyProducts.DataModels\CompanyProducts.DataModels.csproj">
+      <Project>{7b188510-9917-4872-8a41-da0fc386317a}</Project>
+      <Name>CompanyProducts.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyProducts.Data\CompanyProducts.Data.csproj">
+      <Project>{4ce27718-0ef0-48c6-b3dc-d9755a0d8675}</Project>
+      <Name>CompanyProducts.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

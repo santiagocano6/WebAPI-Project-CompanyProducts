@@ -8,6 +8,7 @@
 
     public class JsonTextFile
     {
+        private readonly object fileLock = new object();
         private readonly string FileName;
 
         public JsonTextFile(string fileName)
@@ -17,9 +18,13 @@
 
         public IQueryable<T> ReturnData<T>() where T : IRecord
         {
-            string path = FileName;
-            var reader = new StreamReader(path);
-            string json = reader.ReadToEnd();
+            string json;
+            lock (fileLock)
+            {
+                string path = FileName;
+                var reader = new StreamReader(path);
+                json = reader.ReadToEnd();
+            }
 
             var data = JsonConvert.DeserializeObject<ICollection<T>>(json);
             return data.AsQueryable<T>();
