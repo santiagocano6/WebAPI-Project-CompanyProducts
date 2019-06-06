@@ -7,10 +7,10 @@
     [DataContract]
     public class ProductsReponse
     {
-        public ProductsReponse(string category, int totalProducts, int hiddenProducts, ICollection<Product> products)
+        public ProductsReponse(string category, int shownProducts, int hiddenProducts, ICollection<Product> products)
         {
             Category = category;
-            TotalProducts = totalProducts;
+            ShownProducts = shownProducts;
             HiddenProducts = hiddenProducts;
             Products = products;
         }
@@ -18,8 +18,8 @@
         [DataMember(Name = "category")]
         public string Category { get; }
 
-        [DataMember(Name = "totalproducts")]
-        public int TotalProducts { get; }
+        [DataMember(Name = "shownproducts")]
+        public int ShownProducts { get; }
 
         [DataMember(Name = "hiddenproducts")]
         public int HiddenProducts { get; }
