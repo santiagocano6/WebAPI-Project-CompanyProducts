@@ -46,6 +46,7 @@
       <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
@@ -54,8 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Resources\ProductsData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CompanyProducts.Bll\CompanyProducts.Bll.csproj">
+      <Project>{6ca6abd6-b03a-4c8f-8edc-9833ae8540fb}</Project>
+      <Name>CompanyProducts.Bll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CompanyProducts.DataModels\CompanyProducts.DataModels.csproj">
       <Project>{7b188510-9917-4872-8a41-da0fc386317a}</Project>
       <Name>CompanyProducts.DataModels</Name>

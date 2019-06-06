@@ -5,13 +5,13 @@ namespace CompanyProducts.Bll
 
     public static class Common
     {
-        public static bool UseMockFiles => ConfigurationManager.AppSettings["UseMockFiles"] == bool.TrueString.ToLower();
+        private static bool UseMockFiles => ConfigurationManager.AppSettings["UseMockFiles"].ToLower() == bool.TrueString.ToLower();
 
         public static string GetProductFilePath()
         {
             if (UseMockFiles)
             {
-                return $@"{AppDomain.CurrentDomain.BaseDirectory}Resources\ProductsData.json";
+                return $@"{AppDomain.CurrentDomain.BaseDirectory}\Resources\ProductsData.json";
             }
             else
             {

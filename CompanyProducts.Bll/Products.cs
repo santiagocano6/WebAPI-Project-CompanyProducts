@@ -10,7 +10,7 @@
     using CompanyProducts.Data.ORM;
     using CompanyProducts.DataModels;
 
-    public class Products : BusinessBase<Product>
+    public sealed class Products : BusinessBase<Product>
     {
         private static Products _classInstance = null;
 
@@ -24,7 +24,7 @@
                 var jsonTextFile = new JsonTextFile(fileName);
                 var productRepository = new GenericRepository<Product>(jsonTextFile);
 
-                return new Products(productRepository);
+                _classInstance = new Products(productRepository);
             }
 
             return _classInstance;

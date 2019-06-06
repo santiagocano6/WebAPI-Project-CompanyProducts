@@ -5,7 +5,7 @@
     using System.Runtime.Serialization;
 
     [DataContract]
-    public class Product : IRecord
+    public sealed class Product : IRecord
     {
         [DataMember(Name = "id")]
         public Guid Id { get; set; }

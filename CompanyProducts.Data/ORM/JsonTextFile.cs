@@ -1,18 +1,24 @@
 ﻿namespace CompanyProducts.Data.ORM
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using CompanyProducts.DataModels;
     using Newtonsoft.Json;
 
-    public class JsonTextFile
+    public sealed class JsonTextFile
     {
         private readonly object fileLock = new object();
         private readonly string FileName;
 
         public JsonTextFile(string fileName)
         {
+            if (string.IsNullOrEmpty(fileName))
+            {
+                throw new ArgumentNullException("fileName", "fileName from JsonTextFile cannot null neither empty");
+            }
+
             FileName = fileName;
         }
 
@@ -21,8 +27,7 @@
             string json;
             lock (fileLock)
             {
-                string path = FileName;
-                var reader = new StreamReader(path);
+                var reader = new StreamReader(FileName);
                 json = reader.ReadToEnd();
             }
 

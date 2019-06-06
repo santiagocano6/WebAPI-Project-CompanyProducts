@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Category
+    public sealed class Category
     {
         public enum CategoryType
         {
